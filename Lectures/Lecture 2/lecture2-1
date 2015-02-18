@@ -216,3 +216,14 @@ cdecl:
 GNU fastcall, Microsoft fastcall - ECX, EDX
 Borland fastcall - EAX, ECX, EDX
 Microsoft thiscall - this в ECX
+
+Example:
+int __attribute__((fastcall))
+foo(double a, int b, double c, int d, int e)
+
+push dword [e]
+mov edx, [d]
+push qword [c]
+mov ecx, [b]
+push qword [a]
+call foo
