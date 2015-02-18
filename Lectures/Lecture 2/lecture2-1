@@ -202,4 +202,17 @@ cdecl - вызывающий очищает стек
 ret n (освободить n бит (ну или очистить))
 ret 16, например
 
+cdecl:
+    push arg1
+    call F
+    add ESP, 4 // очищаем выделенные 4 байта, например (под arg1)
 
+остальные:
+    push arg1
+    call F (он же и очистит 4 байта)
+
+Параметры в регистрах
+
+GNU fastcall, Microsoft fastcall - ECX, EDX
+Borland fastcall - EAX, ECX, EDX
+Microsoft thiscall - this в ECX
