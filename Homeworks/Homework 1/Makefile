@@ -1,5 +1,5 @@
 FLAGS= -f elf32 -g dwarf2
-CFLAGS= -m32 -L. -I../../include
+CFLAGS= -m32 -L. -I.
 PROJECT=hw_sprintf
 
 all: test.o libhw.a
