@@ -5,7 +5,7 @@
 extern "C"
 #endif
 __attribute__((cdecl))
-void hw_sprintf(char* out, char const* format, ...);
+void hw_sprintf(char *out, char const *format, ...);
 
 
 #endif
